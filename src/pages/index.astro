@@ -1,7 +1,17 @@
 ---
 // Component Imports
 import Main from '../layouts/main.astro';
+import Footer from '../components/Footer.astro';
 
+import ServerStack from 'astro-heroicons/outline/ServerStack.astro';
+import AcademicCap from 'astro-heroicons/outline/AcademicCap.astro';
+import Beaker from 'astro-heroicons/outline/Beaker.astro';
+import CommandLine from 'astro-heroicons/outline/CommandLine.astro';
+import Map from 'astro-heroicons/outline/Map.astro';
+import UserPlus from 'astro-heroicons/outline/UserPlus.astro';
+
+import Basecamp from '../components/index/Basecamp.astro';
+import Harvest from '../components/index/Harvest.astro';
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -24,15 +34,15 @@ import Main from '../layouts/main.astro';
       <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
         <div>
           <div>
-            <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">We build lean, powerful apps that serve real customers</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Work with people who will ensure your product gets shipped and help you iterate.</p>
+            <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">Modular approach to Technical Product Consulting</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Exactly what you need when you need it. Choose from various service types that work best for your organization, pay for the time you use.</p>
             <div class="mt-8 flex gap-x-4 sm:justify-center">
-              <a href="/services" class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+              <a href="/services" class="inline-block rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-semibold text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
                 Services
-                <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
+                <span class="text-violet-200" aria-hidden="true">&rarr;</span>
               </a>
-              <a href="#" class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Live demo
+              <a href="/contact-us" class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                Contact Us
                 <span class="text-gray-400" aria-hidden="true">&rarr;</span>
               </a>
             </div>
@@ -51,5 +61,105 @@ import Main from '../layouts/main.astro';
         </div>
       </div>
     </div>
+    <!-- Feature section with grid -->
+    <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-lg font-semibold text-violet-600">Core Services</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to build and ship product</p>
+        <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">Working with Artellectual means you can choose which service you wish to engage with to satisfy your organization's needs.</p>
+        <div class="mt-12">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <!-- Heroicon name: outline/cloud-arrow-up -->
+                      <ServerStack class='h-6 w-6 text-white'/>
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">DevOps</h3>
+                  <p class="mt-5 text-base text-gray-500">You have a development team. You just need someone to setup secure servers / automated continuous delivery pipeline to go live.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <AcademicCap class='h-6 w-6 text-white' />
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Training</h3>
+                  <p class="mt-5 text-base text-gray-500">Your team need to upskill in some specific technology or methodology, to take your product to the next level.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <Beaker class='h-6 w-6 text-white' />
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Product Specification</h3>
+                  <p class="mt-5 text-base text-gray-500">You have a business requirement that needs to be turned into a product specification, so they can be assigned to your team.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <CommandLine class='h-6 w-6 text-white' />
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Development Service</h3>
+                  <p class="mt-5 text-base text-gray-500">Your team is swamped and you need some help with development work on some specific feature.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <Map class='h-6 w-6 text-white' />
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Technical Direction</h3>
+                  <p class="mt-5 text-base text-gray-500">You have an idea! You need someone to help you come up with a blueprint (solution design) on how to technically execute on the idea.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
+                    <span class="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-purple-500 to-indigo-600 p-3 shadow-lg">
+                      <UserPlus class='h-6 w-6 text-white' />
+                    </span>
+                  </div>
+                  <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Technical HR</h3>
+                  <p class="mt-5 text-base text-gray-500">You're looking for developers, You need help intereviewing, vetting, hiring people onto your team.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <Basecamp />
+    <Harvest />
   </main>
 </Main>
+<Footer />
