@@ -3,10 +3,10 @@ const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.slice(1)
 
 const links = [
-  { href: '/', text: 'Home', active: currentPath === "" },
-  { href: '/services', text: 'Services', active: currentPath === "services" },
-  { href: '/method', text: 'Method', active: currentPath === "method" },
-  { href: '/blog', text: 'Blog', active: currentPath === "blog" }
+  { href: '/', text: 'Home' },
+  { href: '/services', text: 'Services' },
+  { href: '/method', text: 'Method' },
+  { href: '/blog', text: 'Blog' }
 ]
 ---
 
@@ -28,7 +28,7 @@ const links = [
 	</div>
 	<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
     {links.map((link) => (      
-      <a href={link.href} class=`font-semibold ${link.active ? 'text-purple-600 hover:text-purple-500' : 'text-gray-900 hover:text-gray-900'}`>
+      <a href={link.href} class=`font-semibold ${currentPath === link.href.slice(1) ? 'text-purple-600 hover:text-purple-500' : 'text-gray-900 hover:text-gray-900'}`>
         {link.text}
       </a>
     ))}
