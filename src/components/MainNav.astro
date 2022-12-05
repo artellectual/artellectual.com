@@ -5,8 +5,7 @@ const pathname = new URL(Astro.request.url).pathname
 const links = [
   { href: '/', text: 'Home' },
   { href: '/services/', text: 'Services' },
-  { href: '/method/', text: 'Method' },
-  { href: '/blog/', text: 'Blog' }
+  { href: '/method/', text: 'Method' }
 ]
 ---
 
@@ -27,11 +26,13 @@ const links = [
 		</button>
 	</div>
 	<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-    {links.map((link) => (      
-      <a href={link.href} class=`font-semibold ${pathname === link.href ? 'text-purple-600 hover:text-purple-500' : 'text-gray-900 hover:text-gray-900'}`>
+    {links.map((link) => {
+			const className = `font-semibold ${pathname === link.href ? 'text-purple-600 hover:text-purple-500' : 'text-gray-900 hover:text-gray-900'}`
+
+      return <a href={link.href} class={className}>
         {link.text}
       </a>
-    ))}
+    })}
 	</div>
 	<div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
 		<a href="https://launchpad.37signals.com/signin" target="_blank" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
