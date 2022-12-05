@@ -1,5 +1,5 @@
 import type { FunctionComponent } from 'react'
-import { useState, Fragment } from 'react'
+import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -10,7 +10,6 @@ interface MainNavProps {
 const MainNav: FunctionComponent<MainNavProps> = (props) => {
   const { pathName } = props
   const pathname = new URL(pathName).pathname
-  const [active, setActive] = useState<boolean>(false)
 
   const links = [
     { href: '/', text: 'Home' },
