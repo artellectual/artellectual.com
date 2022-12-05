@@ -1,5 +1,5 @@
 ---
-import MainNav from '../components/MainNav.astro'
+import MainNav from '../components/MainNav.tsx'
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
@@ -17,9 +17,7 @@ const { title } = Astro.props;
 	<body>
 		<div class="isolate bg-white">
 			<div class="px-6 pt-6 lg:px-8">
-				<div>
-					<MainNav />
-				</div>
+				<MainNav pathName={Astro.request.url} client:load />
 			</div>
 			<slot />
 		</div>
