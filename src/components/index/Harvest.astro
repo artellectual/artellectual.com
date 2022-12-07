@@ -4,26 +4,25 @@ import Clock from 'astro-heroicons/outline/Clock.astro';
 
 <div class="mt-24 pb-32">
   <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-      <div class="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+    <div class="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+      <div>
         <div>
-          <div>
-            <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
-              <Clock class='h-6 w-6 text-white' />
-            </span>
-          </div>
+          <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+            <Clock class='h-6 w-6 text-white' />
+          </span>
+        </div>
+        <div class="mt-6">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 font-roboto-flex">Time Tracking</h2>
+          <p class="mt-4 text-lg text-gray-500">We track every minute and second that you and your team spend with our consultant, and we only bill you for that time. This ensures that you only pay for the time you actually spend working with us. At the end of the billing period, you will receive a detailed invoice listing all the time spent. We value transparency and believe in providing value for money. We never waste our time or our clients' money, and we strive to make the most of every minute.</p>
           <div class="mt-6">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 font-roboto-flex">Time Tracking</h2>
-            <p class="mt-4 text-lg text-gray-500">Since you are billed by the time you / your team engage with our consultant, we track every minute and every second you spend with us, nothing more. At the end of the billing period you will get an itemized bill of all the time spent. We believe in full transparency. Our time is valuable and so is our client's money. We don't waste a single second.</p>
-            <div class="mt-6">
-              <button onclick="$crisp.push(['do', 'chat:open'])" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Learn More</button>
-            </div>
+            <button onclick="$crisp.push(['do', 'chat:open'])" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Learn More</button>
           </div>
         </div>
       </div>
-      <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
-        <div class="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="Customer profile user interface">
-        </div>
+    </div>
+    <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
+      <div class="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+        <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="Customer profile user interface">
       </div>
     </div>
   </div>
