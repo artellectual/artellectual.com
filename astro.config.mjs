@@ -9,9 +9,12 @@ import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
   output: 'server',
-  integrations: [mdx(), tailwind(), react()],
+  integrations: [mdx(), tailwind(), react(), sitemap()],
   trailingSlash: 'always',
   adapter: cloudflare()
 });
