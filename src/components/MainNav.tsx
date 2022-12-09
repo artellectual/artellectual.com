@@ -14,12 +14,13 @@ const MainNav: FunctionComponent<MainNavProps> = (props) => {
   const links = [
     { href: '/', text: 'Home' },
     { href: '/services/', text: 'Services' },
-    { href: '/method/', text: 'Method' }
+    { href: '/method/', text: 'Method' },
+    { href: '/about/', text: 'About' }
   ]
 
   return (
     <Popover>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 pb-4">
         <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
           <div className="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0">
             <div className="flex w-full items-center justify-between md:w-auto">
