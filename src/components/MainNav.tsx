@@ -14,7 +14,6 @@ const MainNav: FunctionComponent<MainNavProps> = (props) => {
   const links = [
     { href: '/', text: 'Home' },
     { href: '/services/', text: 'Services' },
-    { href: '/method/', text: 'Method' },
     { href: '/about/', text: 'About' }
   ]
 
