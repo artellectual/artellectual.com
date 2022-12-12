@@ -6,7 +6,7 @@ import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 import sitemap from "@astrojs/sitemap";
 
-const pages = ['/', '/services/', '/terms/', '/privacy/', '/about/']
+const pages = ['', 'services/', 'terms/', 'privacy/', 'about/']
 
 // https://astro.build/config
 export default defineConfig({
