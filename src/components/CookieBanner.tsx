@@ -7,7 +7,7 @@ const CookieBanner: FunctionComponent = (props) => {
   const [cookies, setCookie] = useCookies(['artellectual_consent'])
 
   function dismissCookieConsent() {
-    setCookie('artellectual_consent', 'accepted')
+    setCookie('artellectual_consent', 'accepted', { path: '/' })
   }
 
   if (cookies.artellectual_consent === "accepted") {
